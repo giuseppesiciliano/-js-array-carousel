@@ -34,8 +34,8 @@ for (let i = 0; i < items.length; i++) {
 
     // Inserire le immagini
     const newImage = `
-    <div class="single-image active">
-        <img src="${thisPath}" alt="${i}">
+    <div class="single-image">
+        <img src="${thisPath}" alt="Img ${i}">
 
         <div class="text">
             <h2>${thisTitle}</h2>
@@ -43,13 +43,16 @@ for (let i = 0; i < items.length; i++) {
         </div>
     </div>
     `;
-
     imageContainer.innerHTML += newImage;
 
     // Inserire i thumbs
     const newThumbs = `
     <div class="single-thumbs">
-        <img src="img/01.jpg" alt="Img thumbs 1">
+        <img src="${thisPath}" alt="Img thumbs ${i}">
     </div>
     `;
+    thumbs.innerHTML += newThumbs;
 }
+
+
+
