@@ -31,6 +31,8 @@
 
     background-color: blue;
 }
+
+/* Single Image */
 .single-image {
     height: 100%;
     width: 100%;
@@ -41,7 +43,7 @@
     object-fit: cover;
 }
 
-
+/* Thumbs */
 .thumbs {
     height: 100%;
     width: 30%;
