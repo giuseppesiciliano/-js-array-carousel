@@ -55,4 +55,34 @@ for (let i = 0; i < items.length; i++) {
 }
 
 
+// Dare ACTIVE alla classe di un elemento
+let activeImage = 0;
+const allImages = document.getElementsByClassName('single-image');
+const allThumbs = document.getElementsByClassName('single-thumbs');
+
+allImages[activeImage].classList.add('active');
+allThumbs[activeImage].classList.add('active');
+
+
+// Al click di UP (arrow), spostare le classi active all'immagine e ai thumbs
+const upArrow = document.querySelector('.arrow.up');
+upArrow.addEventListener('click', function() {
+    
+    // Rimuovere active dall'immagine corrente
+    allImages[activeImage].classList.remove('active');
+    allThumbs[activeImage].classList.remove('active');
+
+    // Incrementare activeImage di 1 solo se non è l'ultima foto
+    // Se l'immagine è l'ultima ricomincio da 0
+    if ( activeImage > 0 ) {
+        activeImage--;
+    } else {
+        activeImage = items.length - 1;
+    }
+
+    // Assegnare all'immagine col nuovo indice la classe active
+    allImages[activeImage].classList.add('active');
+    allThumbs[activeImage].classList.add('active');
+});
+
 
