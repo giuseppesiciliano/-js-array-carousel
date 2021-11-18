@@ -49,6 +49,7 @@
 .thumbs {
     height: 100%;
     width: 30%;
+    position: relative;
 }
 .single-thumbs {
     height: 20%;
@@ -62,4 +63,22 @@
 }
 .single-thumbs.active img {
     filter: grayscale(0);
+}
+
+/* Arrow */
+.arrow {
+    position: absolute;
+
+    color: red;
+    font-size: 30px;
+}
+.arrow.up {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.arrow.down {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
