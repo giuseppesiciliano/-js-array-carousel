@@ -86,3 +86,23 @@ upArrow.addEventListener('click', function() {
 });
 
 
+// Al click di DOWN (arrow), spostare le classi active all'immagine e ai thumbs
+const downArrow = document.querySelector('.arrow.down');
+downArrow.addEventListener('click', function() {
+    
+    // Rimuovere active dall'immagine corrente
+    allImages[activeImage].classList.remove('active');
+    allThumbs[activeImage].classList.remove('active');
+
+    // Decrementare activeImage di 1 solo se non è l'ultima foto
+    // Se l'immagine è l'ultima ricomincio da 0
+    if( activeImage < items.length - 1 ) {
+        activeImage++;
+    } else {
+        activeImage = 0;
+    }
+
+    // Assegnare all'immagine col nuovo indice la classe active
+    allImages[activeImage].classList.add('active');
+    allThumbs[activeImage].classList.add('active');
+});
