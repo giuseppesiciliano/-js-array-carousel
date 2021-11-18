@@ -6,7 +6,7 @@
 }
 
 
-
+/* COMMON */
 .app-container {
     width: 100%;
     height: 100vh;
@@ -15,8 +15,14 @@
     align-items: center;
 }
 
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 
+/* SLIDER */
 .slider {
     height: 60%;
     width: 80%;
@@ -28,8 +34,6 @@
 .image-container {
     height: 100%;
     width: 70%;
-
-    background-color: blue;
 }
 
 /* Single Image */
@@ -41,16 +45,13 @@
 .single-image.active {
     display: block;
 }
-.single-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
 
 /* Thumbs */
 .thumbs {
     height: 100%;
     width: 30%;
-
-    background-color: pink;
+}
+.single-thumbs {
+    height: 20%;
+    width: 100%;
 }
